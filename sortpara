@@ -40,3 +40,40 @@ func main() {
 	}
 
 }
+#####
+
+package main
+
+import (
+	"os"
+
+	"github.com/01-edu/z01"
+)
+
+func main() {
+	args := os.Args[1:]
+	i := 1
+	for : i < = len (args); {
+		if arg[i] > arg [i + 1] {
+			temp := arg[i]
+			arg[i] = arg [i + 1]
+			arg [i + 1] = temp
+		}else {
+			i++
+		}
+	
+	} 
+}
+
+/*
+for i := 0; i < len(args)-1; i++ {
+    for j := 0; j < len(args)-1-i; j++ {
+        if args[j] > args[j+1] {
+            temp := args[j]
+            args[j] = args[j+1]
+            args[j+1] = temp
+        }
+    }
+}
+
+*/
