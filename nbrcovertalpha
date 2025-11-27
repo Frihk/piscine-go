@@ -1,0 +1,20 @@
+package main
+
+import (
+	"os"
+
+	"github.com/01-edu/z01"
+)
+
+func main() {
+	args := os.Args[1:]
+
+	for _, c := range args {
+		num := 0
+		for _, r := range c {
+			num = num*10 + int(r-'0')
+		}
+		z01.PrintRune(rune('a' + num - 1))
+	}
+	z01.PrintRune('\n')
+}
