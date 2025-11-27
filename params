@@ -21,3 +21,24 @@ func main() {
 		}
 	}
 }
+
+
+####3
+
+package main
+
+import (
+	"os"
+
+	"github.com/01-edu/z01"
+)
+
+func main() {
+	for _, c := range os.Args[1:] {
+		for _, r := range c {
+			z01.PrintRune(r)
+		}
+		z01.PrintRune(' ')
+	}
+	z01.PrintRune('\n')
+}
