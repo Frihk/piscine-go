@@ -1,0 +1,10 @@
+func MakeRange(min, max int) []int {
+	if max < min {
+		return nil
+	}
+	mak := make([]int, max-min)
+	for i := min; i < max; i++ {
+		mak[i-min] = i
+	}
+	return mak
+}
