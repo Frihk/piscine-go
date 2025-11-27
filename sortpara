@@ -51,20 +51,28 @@ import (
 )
 
 func main() {
-	args := os.Args[1:]
-	i := 1
-	for : i < = len (args); {
-		if arg[i] > arg [i + 1] {
-			temp := arg[i]
-			arg[i] = arg [i + 1]
-			arg [i + 1] = temp
-		}else {
-			i++
+		args := os.Args[1:]
+		i := 1
+		for : i < = len (args); {
+			if arg[i] > arg [i + 1] {
+				temp := arg[i]
+				arg[i] = arg [i + 1]
+				arg [i + 1] = temp
+			}else {
+				i++
+			}
+		
+		} 
+		for j, arg := range args {
+			for _, c := range arg {
+				z01.PrintRune(c)
+			}
+			if j < len(args)-1 {
+				z01.PrintRune(' ') // space between arguments
+			}
 		}
-	
-	} 
+		z01.PrintRune('\n') // end with newline
 }
-
 /*
 for i := 0; i < len(args)-1; i++ {
     for j := 0; j < len(args)-1-i; j++ {
